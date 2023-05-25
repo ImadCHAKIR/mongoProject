@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+  </div>
+  <form [formGroup]="userForm" (ngSubmit) = "onSubmit()">
+      <h3>Login Here</h3>
+
+      <label for="username">Username</label>
+      <input type="text" placeholder="Username" id="username" formControlName="userName">
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" formControlName="password">
+
+      <button type="submit">Log In</button>
+
+      <div style="text-align: center;padding-top: 25px;">
+        Not yet a user?  <span class="singin" style="cursor: pointer;" [routerLink]="['/signup']">Sign up</span>
+      </div>
+
+  </form>
+
+</div>
+

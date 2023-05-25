@@ -1,0 +1,25 @@
+
+<div class="container">
+  <form [formGroup]="taskForm">
+    <div class="row">
+      <h4>Task Creation</h4>
+      <div class="input-group ">
+        <input type="text" placeholder="Task Name"/>
+      </div>
+
+      <div class="colorPicker">
+        <app-color-picker></app-color-picker>
+      </div>
+
+      <div class="input-group ">
+        <textarea matInput placeholder="Ex. It makes me feel..." cols="56" rows="5"></textarea>
+      </div>
+
+      <div style="display: flex;justify-content: space-between;">
+        <div></div>
+        <button type="submit" (click)="onFormSubmit()" >Submit</button>
+      </div>
+
+    </div>
+  </form>
+</div>

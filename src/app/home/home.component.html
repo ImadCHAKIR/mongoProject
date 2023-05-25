@@ -1,0 +1,25 @@
+<article class="wrapper">
+
+  <nav>
+    <div>
+      <img src="../../assets/images/taskLogo.png" alt="">
+      <div>
+        <h1>My-Tasks</h1>
+      </div>
+    </div>
+
+    <div (click)="logout()">
+      <button >Logout</button>
+    </div>
+  </nav>
+
+  <div class="table">
+    <app-task-table [todo]="todo" [inProgress]="inProgress" [done]="done" (dialog) = "openDialog($event)"></app-task-table>
+  </div>
+
+  <div class="dialog" [ngClass]="dialog">
+    <app-task-form [formGroup] = "taskForm" (dialog)="hideDialog($event)"></app-task-form>
+  </div>
+
+  <div class="dialogBackground" [ngClass]="dialog" (click)="hideDialog('hidden')"></div>
+</article>
